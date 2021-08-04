@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "QjlyA7tRti1cfLDbMbrOh7r0qBvo+ccmWjoduZpb3g4+yrVk5lRS+gTSvnKI//VHuFGUPDtrBJZD9zl0GZG9hQ==",
+  "dgSpecHash": "3SHzKpfd90sFPvZCOKqm5DduRnCkqWLHWvdhbWuZGqt0G99TpLrCs+5qpRfrmmfzs9MKjTbOJvtc6CkCsOKTcA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\grzes\\Desktop\\Lista-Zadann\\TaskManager\\TaskManager.csproj",
+  "projectFilePath": "C:\\Users\\grzes\\Desktop\\Lista-Zadań\\TaskManager\\TaskManager.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\grzes\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\grzes\\.nuget\\packages\\microsoft.aspnetcore.mvc.razor.extensions\\3.1.15\\microsoft.aspnetcore.mvc.razor.extensions.3.1.15.nupkg.sha512",
