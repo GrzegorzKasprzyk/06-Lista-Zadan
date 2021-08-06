@@ -1,9 +1,9 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
 using TaskManager.Models;
 using TaskManager.Repositories;
 
@@ -12,16 +12,14 @@ namespace TaskManager.Controllers
     public class TaskController : Controller
     {
         private readonly ITaskRepository _taskRepository;
-
         public TaskController(ITaskRepository taskRepository)
         {
             _taskRepository = taskRepository;
         }
-
         // GET: Task
         public ActionResult Index()
         {
-            return View(_taskRepository.GetAllActive());
+            return View(_taskRepository.GetAllctive());
         }
 
         // GET: Task/Details/5
@@ -29,7 +27,6 @@ namespace TaskManager.Controllers
         {
             return View(_taskRepository.Get(id));
         }
-
         // GET: Task/Create
         public ActionResult Create()
         {
@@ -43,7 +40,7 @@ namespace TaskManager.Controllers
         {
             _taskRepository.Add(taskModel);
 
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction(nameof(Index));                      
         }
 
         // GET: Task/Edit/5
@@ -58,9 +55,8 @@ namespace TaskManager.Controllers
         public ActionResult Edit(int id, TaskModel taskModel)
         {
             _taskRepository.Update(id, taskModel);
-
-            return RedirectToAction(nameof(Index));
-
+                return RedirectToAction(nameof(Index));
+          
         }
 
         // GET: Task/Delete/5
@@ -76,12 +72,12 @@ namespace TaskManager.Controllers
         {
             _taskRepository.Delete(id);
 
-            return RedirectToAction(nameof(Index));
-
+                return RedirectToAction(nameof(Index));
+           
         }
 
         // GET: Task/Done/5
-        public ActionResult Done(int id)
+        public ActionResult Done (int id)
         {
             TaskModel task = _taskRepository.Get(id);
             task.Done = true;

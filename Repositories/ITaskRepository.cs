@@ -9,11 +9,10 @@ namespace TaskManager.Repositories
     public interface ITaskRepository
     {
         TaskModel Get(int taskId);
-        IQueryable<TaskModel> GetAllActive();
+        IQueryable<TaskModel> GetAllctive();
+
         void Add(TaskModel task);
         void Update(int taskId, TaskModel task);
         void Delete(int taskId);
-
-
     }
 }
