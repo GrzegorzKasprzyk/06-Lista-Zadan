@@ -20,8 +20,6 @@ namespace TaskManager.Models
         [DisplayName("Opis")]
         [MaxLength(2000)]
         public string Description { get; set; }
-        
         public bool Done { get; set; }
-       
     }
 }
